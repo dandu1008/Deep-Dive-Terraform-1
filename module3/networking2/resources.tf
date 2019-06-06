@@ -22,7 +22,7 @@ data "aws_availability_zones" "available" {}
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
   name = "Terraform-${terraform.workspace}"
-
+  version = "1.66.0"
   cidr = "10.0.0.0/16"
   azs = "${slice(data.aws_availability_zones.available.names,0,var.subnet_count)}"
   private_subnets = ["10.0.1.0/24","10.0.3.0/24"]

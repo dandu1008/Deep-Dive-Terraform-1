@@ -21,6 +21,8 @@ data "aws_availability_zones" "available" {}
 # NETWORKING #
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
+  version = "1.66.0"
+
   name = "Terraform"
 
   cidr = "10.0.0.0/16"

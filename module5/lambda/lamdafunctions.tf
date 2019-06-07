@@ -25,9 +25,7 @@ data "aws_iam_group" "ec2admin" {
   group_name = "EC2Admin"
 }
 
-data "aws_region" "current" {
-  current = true
-}
+data "aws_region" "current" {}
 
 ##################################################################################
 # RESOURCES
@@ -103,7 +101,7 @@ resource "aws_lambda_function" "data_source_ddb" {
   function_name = "tdd_ddb_query"
   role          = "${aws_iam_role.iam_for_lambda.arn}"
   handler       = "index.handler"
-  runtime       = "nodejs6.10"
+  runtime       = "nodejs8.10"
 }
 
 resource "aws_api_gateway_rest_api" "tddapi" {

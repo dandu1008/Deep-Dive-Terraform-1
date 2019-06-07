@@ -1,4 +1,6 @@
 git
+github
+workflow-aggregator
 ws-cleanup
 docker-workflow
 terraform

@@ -25,7 +25,7 @@ USER root
 
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
  && apt-get update \
- && apt-get install -y --no-install-recommends graphviz nodejs maven \
+ && apt-get install -y --no-install-recommends graphviz nodejs maven jq \
  && rm -rf /var/lib/apt/lists/* \
  && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D \
  && echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable" > /etc/apt/sources.list.d/docker.list \

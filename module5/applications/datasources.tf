@@ -24,7 +24,7 @@ data "terraform_remote_state" "networking" {
 
 data "aws_ami" "ubuntu" {
   most_recent = true
-  owners = ["679593333241"]
+  owners = ["aws-marketplace"]
 
   filter {
     name   = "name"

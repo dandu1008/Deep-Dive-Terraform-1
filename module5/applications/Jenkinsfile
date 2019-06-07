@@ -21,6 +21,8 @@ pipeline {
         stage('ApplicationInit'){
             steps {
                 dir('module5/applications/'){
+                    sh "terraform -v"
+                    echo "$TF_HOME"
                     sh "terraform init -input=false \
                      --backend-config='dynamodb_table=$DYNAMODB_STATELOCK' --backend-config='bucket=$APPLICATION_BUCKET' \
                      --backend-config='access_key=$APPLICATION_ACCESS_KEY' --backend-config='secret_key=$APPLICATION_SECRET_KEY'"

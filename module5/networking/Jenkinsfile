@@ -20,6 +20,7 @@ pipeline {
         stage('NetworkInit'){
             steps {
                 dir('module5/networking/'){
+                    echo "$TF_HOME"
                     sh 'terraform --version'
                     sh "terraform init -input=false \
                      --backend-config='dynamodb_table=$DYNAMODB_STATELOCK' --backend-config='bucket=$NETWORKING_BUCKET' \

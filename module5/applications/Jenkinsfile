@@ -13,7 +13,7 @@ pipeline {
         TF_IN_AUTOMATION = "true"
         PATH = "$TF_HOME:$PATH"
         DYNAMODB_STATELOCK = "ddt-tfstatelock"
-        APPLICATION_BUCKET = "ddt-application"
+        APPLICATION_BUCKET = "ddt-application-dolly"
         APPLICATION_ACCESS_KEY = credentials('application_access_key')
         APPLICATION_SECRET_KEY = credentials('application_secret_key')
     }

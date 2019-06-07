@@ -12,10 +12,10 @@ pipeline {
         TF_IN_AUTOMATION = "true"
         PATH = "$TF_HOME:$PATH"
         DYNAMODB_STATELOCK = "ddt-tfstatelock"
-        NETWORKING_BUCKET = "ddt-networking"
+        NETWORKING_BUCKET = "ddt-networking-dolly"
         NETWORKING_ACCESS_KEY = credentials('networking_access_key')
         NETWORKING_SECRET_KEY = credentials('networking_secret_key')
-        APPLICATION_BUCKET = "ddt-application"
+        APPLICATION_BUCKET = "ddt-application-dolly"
         APPLICATION_ACCESS_KEY = credentials('application_access_key')
         APPLICATION_SECRET_KEY = credentials('application_secret_key')
     }

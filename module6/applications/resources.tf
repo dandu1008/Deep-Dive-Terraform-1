@@ -15,7 +15,7 @@ provider "aws" {
 data "template_file" "userdata" {
   template = "${file("templates/userdata.sh")}"
 
-  vars {
+  vars={
     wp_db_hostname   = "${aws_db_instance.rds.endpoint}"
     wp_db_name = "${terraform.workspace}${data.external.configuration.result.rds_db_name}"
     wp_db_user            = "${var.rds_username}"

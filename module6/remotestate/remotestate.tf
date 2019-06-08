@@ -6,11 +6,11 @@ variable "aws_access_key" {}
 variable "aws_secret_key" {}
 
 variable "aws_networking_bucket" {
-  default = "ddt-networking"
+  default = "ddt-networking-dolly"
 }
 
 variable "aws_application_bucket" {
-  default = "ddt-application"
+  default = "ddt-application-dolly"
 }
 
 variable "aws_dynamodb_table" {

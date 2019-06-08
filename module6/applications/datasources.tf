@@ -23,6 +23,7 @@ data "terraform_remote_state" "networking" {
 
 data "aws_ami" "ubuntu" {
   most_recent = true
+  owners = ["aws-marketplace"]
 
   filter {
     name   = "name"
@@ -46,7 +47,7 @@ data "aws_ami" "ubuntu" {
 }
 
 data "external" "configuration" {
-  program = ["powershell.exe", "../scripts/getenvironment.ps1"]
+  program = ["bash", "../scripts/getenvironment.sh"]
 
   # Optional request headers
   query = {
